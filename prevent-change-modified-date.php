@@ -4,7 +4,7 @@
  * Plugin Name:       Prevent Change Modified Date
  * Plugin URI:        https://github.com/nabeghe/wordpress-prevent-change-modified-date
  * Description:       It prevents the modification date of posts from being edited, except by activating a checkbox when updating the post.
- * Version:           0.1.0
+ * Version:           0.1.1
  * Requires at least: 6.0
  * Requires PHP:      5.6
  * Author:            Hadi Akbarzadeh
@@ -41,4 +41,5 @@ function _herminal_prevent_modified_until_check( $data, $postarr, $unsanitized_p
 		$data['post_modified']     = $postarr['post_modified'];
 		$data['post_modified_gmt'] = $postarr['post_modified_gmt'];
 	}
+  return $data;
 }
